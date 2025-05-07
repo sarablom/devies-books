@@ -1,0 +1,22 @@
+.all-books-list-wrapper {
+	list-style-type: none;
+}
+
+.all-books-list-wrapper > li {
+	max-width: min(400px 100%);
+	border: 2px solid peachpuff;
+	margin-bottom: 16px;
+	padding: 8px;
+}
+
+.read-more-btn {
+	display: block;
+  width: fit-content;
+	border: none;
+  border-radius: 8px;
+	background: peachpuff;
+	padding: 8px 12px;
+	font-weight: 700;
+	font-family: inherit;
+  text-decoration: none;
+}
