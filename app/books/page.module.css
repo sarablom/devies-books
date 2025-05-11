@@ -1,3 +1,8 @@
+.sort-buttons-wrapper {
+	display: flex;
+	gap: 8px;
+}
+
 .all-books-list-wrapper {
 	list-style-type: none;
 }
@@ -11,12 +16,12 @@
 
 .read-more-btn {
 	display: block;
-  width: fit-content;
+	width: fit-content;
 	border: none;
-  border-radius: 8px;
+	border-radius: 8px;
 	background: peachpuff;
 	padding: 8px 12px;
 	font-weight: 700;
 	font-family: inherit;
-  text-decoration: none;
+	text-decoration: none;
 }

@@ -1,6 +1,6 @@
 import { deviesApiBaseURL } from "@/app/utils/urls.constants";
-import styles from "./page.module.css";
-import Link from "next/link";
+
+import { SortBooks } from "./SortBooks";
 
 export default async function BooksPage() {
 	const res = await fetch(`${deviesApiBaseURL}books`);
@@ -9,7 +9,7 @@ export default async function BooksPage() {
 		throw new Error("Kunde inte hämta data");
 	}
 
-	const books = await res.json();
+	const books: Book[] = await res.json();
 
 	if (!books)
 		return (
@@ -21,17 +21,7 @@ export default async function BooksPage() {
 	return (
 		<section>
 			<h1>All books</h1>
-			<ul className={styles["all-books-list-wrapper"]}>
-				{books.map(({ id, name, description }: Book) => (
-					<li key={`${id}-${name}`}>
-						<h2>{name}</h2>
-						<small>{description}</small>
-						<Link href={`/books/${id}`} className={styles["read-more-btn"]}>
-							Läs mer
-						</Link>
-					</li>
-				))}
-			</ul>
+      <SortBooks books={books} />
 		</section>
 	);
 }
