@@ -1,0 +1,13 @@
+.sign-in-form {
+	border: 1px solid salmon;
+	display: flex;
+	flex-direction: column;
+	border-radius: 16px;
+	padding: 16px;
+}
+
+.sign-in-form > input {
+	width: 200px;
+	height: 30px;
+  margin-bottom: 16px;
+}
